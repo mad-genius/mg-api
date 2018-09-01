@@ -33,7 +33,7 @@ class MG_API {
         return $this->api_base_url . $path;
     }
 
-    public function get( $url, $params = [] ) {
+    public function get( $url, $params = array() ) {
         $hash = $this->api_hash;
         
         if( count( $params ) > 0 ) $url .= '?';
@@ -75,19 +75,6 @@ class MG_API {
             $args['headers']['authorization'] = "Basic $hash";
         }
 
-        $response = wp_remote_post( $url, $args );
-
-        if( is_wp_error( $response ) ) {
-            error_log( $response->get_error_message() );
-            error_log( print_r( $params, true ) );
-            return;
-        }
-
-        if( $response['response']['code'] > 299 ) {
-            error_log( print_r( $response, true ) );
-            error_log( print_r( $params, true ) );
-        }
-
-        return $response;
+        return wp_remote_post( $url, $args );
     }
 }
