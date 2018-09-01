@@ -1,5 +1,18 @@
 <?php
 
+/*
+* MG_API
+*
+* Copyright (c) 2018 Mad Genius Inc (https://madg.com)
+*
+* By Blake Watson (@blakewatson)
+* Licensed under the MIT license.
+*
+* @link https://github.com/mad-genius/mg-api
+* @author Blake Watson
+* @version 1.0
+*/
+
 class MG_API {
     public $api_base_url;
 
