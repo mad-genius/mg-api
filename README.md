@@ -9,7 +9,7 @@ An extendable PHP class for WordPress that provides methods for working with API
 #### $api_base_url
 The base URL (not including endpoint path). Ex: _<https://api.example.com>_.
 
-```
+```php
 public string $api_base_url;
 ```
 
@@ -18,28 +18,28 @@ public string $api_base_url;
 #### __construct
 Returns the `MG_API` instance.
 
-```
+```php
 public __construct([ string $base_url = '' [, string $hash = '' ]]);
 ```
 
 #### endpoint
 Returns a full URL consisting of the base URL and the endpoint path.
 
-```
+```php
 public endpoint( string $path = NULL );
 ```
 
 #### get
 Returns the response of [`wp_remote_get`](https://developer.wordpress.org/reference/functions/wp_remote_get/).
 
-```
+```php
 public get( string $url [, array $params = array() ]);
 ```
 
 #### post
 `$args` gets passed directly to [`wp_remote_post`](https://developer.wordpress.org/reference/functions/wp_remote_post/). Returns the response of [`wp_remote_post`](https://developer.wordpress.org/reference/functions/wp_remote_post/).
 
-```
+```php
 public post( string $url [, array $params = array() [, array $args = array() ]]);
 ```
 
