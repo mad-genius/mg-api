@@ -4,6 +4,10 @@ class MG_API {
     public $api_base_url;
 
     public function __construct( $base_url = '', $hash = '' ) {
+		// remove trailing space
+		if( substr( $base_url, -1 ) === '/' ) {
+			$base_url = substr( $base_url, 0, strlen( $base_url ) - 1 );
+		}
         // the base url path of the API
         $this->api_base_url = $base_url;
         // the api authentication hash
