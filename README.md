@@ -160,7 +160,7 @@ $movie_api = new Movies( 'https://api.example.com/' );
 $matrix = $movie_api->get_movie( 'The Matrix' );
 
 // add our review
-$movie_api->add_review( 'There is no spoon.', $movie['id'] );
+$movie_api->add_review( 'There is no spoon.', $matrix['id'] );
 ```
 
 ### Disclaimer
