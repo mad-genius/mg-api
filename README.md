@@ -102,7 +102,7 @@ class Movies extends MG_API {
 
     public function __construct( $api_base_url, $api_key ) {
         // save the API key
-        $this->api_key = api_key;
+        $this->api_key = $api_key;
         
         // call MG_API’s constructor
         parent::__construct( $api_base_url );
